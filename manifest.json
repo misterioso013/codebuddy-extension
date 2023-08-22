@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "CodeBuddy Utils",
+    "version": "1.0",
+    "description": "Utilidades para o site da CodeBuddy",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "images/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://codebuddy.io/*"
+            ],
+            "js": [
+                "scripts/content.js"
+            ]
+        }
+    ]
+}
